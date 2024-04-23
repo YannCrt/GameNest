@@ -44,7 +44,8 @@ function isLoggedOn() {
 
     if (isset($_SESSION["mailU"])) {
         $util = getUtilisateurByMailU($_SESSION["mailU"]);
-        if ($util["mailU"] == $_SESSION["mailU"]) {
+        if ($util["mailU"] == $_SESSION["mailU"] && $util["mdpU"] == $_SESSION["mdpU"]
+        ) {
             $ret = true;
         }
     }
