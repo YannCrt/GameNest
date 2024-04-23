@@ -21,6 +21,6 @@
 </div>
 <hr>
 Utilisateur de test : <br />
-login : Gazo@bts.sio<br />
+login : Gazo@Gazo<br />
 mot de passe : Gazo
 

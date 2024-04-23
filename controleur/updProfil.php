@@ -5,10 +5,6 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
 }
 include_once "$racine/modele/authentification.inc.php";
 include_once "$racine/modele/bd.utilisateur.inc.php";
-include_once "$racine/modele/bd.typecuisine.inc.php";
-include_once "$racine/modele/bd.resto.inc.php";
-include_once "$racine/modele/bd.aimer.inc.php";
-include_once "$racine/modele/bd.preferer.inc.php";
 
 // creation du menu burger
 $menuJeu = array();
@@ -67,9 +63,6 @@ if (isLoggedOn()) {
 
     
     // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
-    $mesRestosAimes = getRestosAimesByMailU($mailU);
-    $mesTypeCuisineAimes = getTypesCuisinePreferesByMailU($mailU);
-    $lesAutresTypesCuisine = getTypesCuisineNonPreferesByMailU($mailU);
     
     // appel du script de vue qui permet de gerer l'affichage des donnees
     $titre = "Mon profil";
