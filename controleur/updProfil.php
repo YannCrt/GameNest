@@ -37,32 +37,6 @@ if (isLoggedOn()) {
             }
         }
     }
-
-    if (isset($_POST["lstidR"])) {
-        $lstidR = $_POST["lstidR"];
-        for ($i = 0; $i < count($lstidR); $i++) {
-            delAimer($mailU, $lstidR[$i]);
-        }
-    }
-    
-    //addLstidTC
-    if (isset($_POST["addLstidTC"])) {
-        $addLstidTC = $_POST["addLstidTC"];
-        for ($i = 0; $i < count($addLstidTC); $i++) {
-            addPreferer($mailU, $addLstidTC[$i]);
-        }
-    }
-    
-    //delLstidTC
-    if (isset($_POST["delLstidTC"])) {
-        $delLstidTC = $_POST["delLstidTC"];
-        for ($i = 0; $i < count($delLstidTC); $i++) {
-            delPreferer($mailU, $delLstidTC[$i]);
-        }
-    }
-
-    
-    // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
     
     // appel du script de vue qui permet de gerer l'affichage des donnees
     $titre = "Mon profil";
