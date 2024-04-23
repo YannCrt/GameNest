@@ -1,7 +1,7 @@
 <?php
 
 include_once "bd.utilisateur.inc.php";
-
+error_reporting(E_ERROR | E_PARSE);
 function login($mailU, $mdpU) {
     if (!isset($_SESSION)) {
         session_start();
@@ -44,11 +44,11 @@ function isLoggedOn() {
 
     if (isset($_SESSION["mailU"])) {
         $util = getUtilisateurByMailU($_SESSION["mailU"]);
-        if ($util["mailU"] == $_SESSION["mailU"] && $util["mdpU"] == $_SESSION["mdpU"]
-        ) {
+        if ($util["mailU"] == $_SESSION["mailU"]) {
             $ret = true;
         }
     }
+    
     return $ret;
 }
 

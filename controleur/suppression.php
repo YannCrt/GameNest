@@ -15,8 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["mailU"])) {
     // Appel à la fonction de suppression
     if (deleteAccount($mailU)) {
         echo "L'utilisateur a été supprimé avec succès.";
-    } else {
-        echo "Erreur lors de la suppression de l'utilisateur.";
     }
 }
 // traitement si necessaire des donnees recuperees    
