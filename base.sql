@@ -13,4 +13,4 @@ CREATE TABLE `utilisateur` (
 
 INSERT INTO `utilisateur` (`mailU`, `mdpU`, `pseudoU`) VALUES
 ('test@bts.sio', 'seSzpoUAQgIl.', 'testeur SIO'),
-('Gazo', 'sevzZ8runzy/2', 'Gazo');
+('Gazo@Gazo', 'sevzZ8runzy/2', 'Gazo');
